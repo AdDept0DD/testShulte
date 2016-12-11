@@ -1,0 +1,24 @@
+body{
+    padding-top: 60px;
+    background: black;
+}
+
+
+.test_table td {
+
+    width: 100px;
+    height: 100px;
+    color: lightgrey;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+
+/*
+.test_table td:hover {
+.test_table td:active {
+
+	background: blue;
+
+}*/
