@@ -109,6 +109,10 @@
 <script src="src/js/bootstrap.min.js"></script>
 
 
+
+
+<script src="src/js/arrayMix.js"></script>
+<script src="src/js/timer.js"></script>
 <script src="src/js/test_prg.js"></script>
 
 
@@ -142,6 +146,12 @@
 <!---->
 <!--    console.log('Ok-ok1111');-->
 <!--</script>-->
+<?php
+$myVar =3;
+echo "aaa = $myVar";   //  выведется значение
+
+?>
+
 
 </body>
 </html>

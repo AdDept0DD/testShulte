@@ -1,4 +1,5 @@
 
+ 
 
 // todo выбрать все ячейки таблицы и записать туда что-то
 var allTd = $('.test_table td');
@@ -31,6 +32,7 @@ function getRandomInt(min, max)
  * функция которая перемешивает значения в массиве
  *
  */
+ /*
 function mix( data ){
 
     $.each( data, function( key, val ){
@@ -49,6 +51,7 @@ function mix( data ){
 
     return data;
 }
+*/
 /**
  * Перемешиваем значения в массиzве
 **/
@@ -59,9 +62,14 @@ var newArr = mix(chars);
  * отсчет времени
 **/
 
-
-var thisTimer = {
-	ClearTimer: function (){
+/*
+//var thisTimer = {
+function thisTimer(thisTxtLkl, intervalCirclLkl, arrLkl, timIntervalLkl, tegText){
+	this.thisTxt = thisTxtLkl,
+	this.intervalCircl = intervalCirclLkl,
+	this.arr = arrLkl,
+	this.timInterval = timIntervalLkl
+	this.ClearTimer = function (){
 		// если интервал небыл запущен -> пропускаем
 		if(thisTxt != 0){
 			clearInterval(intervalCircl);
@@ -69,14 +77,16 @@ var thisTimer = {
 		}
 		timInterval = 0;
 	},
-	startTimer:function (){
+	this.startTimer = function (){
 		//this.ClearTimer;
 		intervalCircl = setInterval(function(){
 				timInterval = timInterval + 1;
-				$(".allSecond").html(timInterval);
+				//$(".allSecond").html(timInterval);
+				$(tegText).html(timInterval);
 		}, 1000);
 		return 0;
 	}
+}*/
 	/*function startTimer(){
 		// если интервал небыл запущен -> пропускаем
 		if(thisTxt != 0){
@@ -91,20 +101,28 @@ var thisTimer = {
 		}, 100);
 		return 0;
 	}*/
-	
-}
-
+var ob = new thisTimer(thisTxt, intervalCircl, arr, timInterval, ".allSecond")
 
 /**
  * Заполнение таблицы
 **/
-function GenerateTableNum(allTdRef){
+function GenerateTableNum(allTdRef, newArrLkl, obLkl, tegText, arrTegLkl, arrLkl){
+	var newArr = newArrLkl;
+	var ob1 = obLkl;
 	$.each(allTdRef, function( key, td1 ){
 	$(td1).html( newArr[key] );
 	});
 	//startTimer();
-	thisTimer.ClearTimer();
-	thisTimer.startTimer();
+	ob1.ClearTimer();
+	ob1.startTimer();
+	
+	$(tegText).empty();
+	//$('.AddNumberMassiv').empty();
+	
+	//arrTeg = [];
+    //arr = [];
+	arrTegLkl = [];
+    arrLkl = [];
 }
 
 
@@ -129,9 +147,9 @@ $('td').bind('click', function(){
 		
 		//startTimer();
 		if(thisTxt != 0){
-			thisTimer.ClearTimer();
+			ob.ClearTimer();
 		}
-		thisTimer.startTimer();
+		ob.startTimer();
 		
 		if(thisTxt == 4){
 			timInterval = 0;
@@ -171,13 +189,13 @@ function fncBlank(form){
     $(".table").removeClass('hidden');
     $(".txt1").addClass('hidden');
     $(".findSumbl").removeClass('hidden');
-    if (arrTeg != null) {
-        $('.AddNumberMassiv').empty();
-        arrTeg = [];
-        arr = [];
-    }
+    //if (arrTeg != null) {
+    //    $('.AddNumberMassiv').empty();
+    //    arrTeg = [];
+    //    arr = [];
+    //}
     newArr = mix(chars);
-    GenerateTableNum(allTd);
+    GenerateTableNum(allTd, newArr, ob, '.AddNumberMassiv', arrTeg, arr);
 }
 
 
