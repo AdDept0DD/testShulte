@@ -119,17 +119,17 @@ function GenerateTableNum(allTdRef, newArrLkl, obLkl, tegText, arrTegLkl, arrLkl
 	$(tegText).empty();
 	//$('.AddNumberMassiv').empty();
 
-	arrTeg = [];
-    arr = [];
+	//arrTeg = [];
+    //arr = [];
 
 	//document.write(arrTegLkl);
-	/*console.log(arrTegLkl)
+	console.log(arrTegLkl)
 	for(var i in arrTegLkl){
-		arrTegLkl[i] = 0;
+		arrTegLkl[i] = null;
 	}
 	for(var i in arrTegLkl){
-		arrLkl[i] = 0;
-	}*/
+		arrLkl[i] = null;
+	}
 }
 
 
