@@ -7,7 +7,7 @@ function thisTimer(thisTxtLkl, intervalCirclLkl, arrLkl, timIntervalLkl, tegText
 	this.arr = arrLkl,
 	this.timInterval = timIntervalLkl
 	this.ClearTimer = function (){
-		// если интервал небыл запущен -> пропускаем
+		// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ -> пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		if(thisTxt != 0){
 			clearInterval(intervalCircl);
 			arr.push(timInterval);
@@ -25,7 +25,7 @@ function thisTimer(thisTxtLkl, intervalCirclLkl, arrLkl, timIntervalLkl, tegText
 	}
 }
 	/*function startTimer(){
-		// если интервал небыл запущен -> пропускаем
+		// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ -> пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		if(thisTxt != 0){
 			clearInterval(intervalCircl);
 			arr.push(timInterval);

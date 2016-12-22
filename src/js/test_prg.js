@@ -115,14 +115,21 @@ function GenerateTableNum(allTdRef, newArrLkl, obLkl, tegText, arrTegLkl, arrLkl
 	//startTimer();
 	ob1.ClearTimer();
 	ob1.startTimer();
-	
+
 	$(tegText).empty();
 	//$('.AddNumberMassiv').empty();
-	
-	//arrTeg = [];
-    //arr = [];
-	arrTegLkl = [];
-    arrLkl = [];
+
+	arrTeg = [];
+    arr = [];
+
+	//document.write(arrTegLkl);
+	/*console.log(arrTegLkl)
+	for(var i in arrTegLkl){
+		arrTegLkl[i] = 0;
+	}
+	for(var i in arrTegLkl){
+		arrLkl[i] = 0;
+	}*/
 }
 
 
