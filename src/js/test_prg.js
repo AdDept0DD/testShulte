@@ -124,12 +124,20 @@ function GenerateTableNum(allTdRef, newArrLkl, obLkl, tegText, arrTegLkl, arrLkl
 
 	//document.write(arrTegLkl);
 	console.log(arrTegLkl)
-	for(var i in arrTegLkl){
+	/*for(var i, i < arrTegLkl.lenght() in arrTegLkl){
 		arrTegLkl[i] = null;
-	}
-	for(var i in arrTegLkl){
+	}*/
+
+	arrTegLkl.forEach(function( item, key){
+		item = null;
+	});
+	arrLkl.forEach(function( item, key){
+		item = null;
+	});
+
+	/*for(var i in arrTegLkl){
 		arrLkl[i] = null;
-	}
+	}*/
 }
 
 
